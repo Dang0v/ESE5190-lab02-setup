@@ -99,9 +99,7 @@ It would be better to create a new folder for the SDK
 ```
 cd ~/
 mkdir pico
-```
-
-```
+cd pico
 git cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential libstdc++-arm-none-eabi-newlib
 ```
 
