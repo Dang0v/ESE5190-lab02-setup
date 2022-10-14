@@ -84,6 +84,8 @@ screen /dev/ttyACM0 115200
 
 <img src="RP2040-C-SDK-setup.assets/image-20221013171227949.png" alt="image-20221013171227949" style="zoom:50%;" />
 
+However, using this method, it seems that you can only interact with serial console, but not connecting to the file storage of board.
+
 
 
 # SDK install
@@ -91,6 +93,13 @@ screen /dev/ttyACM0 115200
 [Pico C/C++ Development Using Windows (pimoroni.com)](https://learn.pimoroni.com/article/pico-development-using-wsl)
 
 First install the software that the Pico SDK needs to be able to compile and build files
+
+It would be better to create a new folder for the SDK
+
+```
+cd ~/
+mkdir pico
+```
 
 ```
 git cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential libstdc++-arm-none-eabi-newlib
@@ -106,6 +115,12 @@ clone the examples
 
 ```
 git clone -b master https://github.com/raspberrypi/pico-examples.git
+```
+
+Now we finish the downloading of SDK into path 
+
+```
+~/pico
 ```
 
 
@@ -138,7 +153,7 @@ And its ok to use '-j16' for our 16-core CPU
 make -j16
 ```
 
-Finally, its easy to open the explorer on windows, and drag uf2 files to our board
+Finally, its easy to open the explorer on windows, and drag uf2 files to our board.
 
 ```
 explorer.exe .
